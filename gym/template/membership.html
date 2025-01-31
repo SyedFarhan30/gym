@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+Membership
+{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center ">
+        <h1 class="display-4 fw-normal text-body-emphasis">Our Pricing</h1>
+        <p class="fs-5 text-body-secondary">A Top-notch Health Fitness Club With Experienced Trainers & Latest Gym Equipment.</p>
+      </div>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" >
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal" >Basic</h4>
+              </div>
+              <div class="card-body">
+                <small class="text-body-secondary">Rs</small>
+                <h1 class="card-title pricing-card-title">3000<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Awesome Community</li>
+                    </div>
+                    <!-- <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Personal Fitness Program</li>
+                    </div> -->
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Nutrition Check-in</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Great Coaching</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Car Parking</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Free Trial Class</li>
+                    </div>
+                </ul>
+                <a href="/registration" >
+                    <button type="button" class="w-100 btn btn-lg btn-primary" onclick="colorFn(this)">Get started</button>
+                   </a>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Premium</h4>
+              </div>
+              <div class="card-body">
+                <small class="text-body-secondary">Rs</small>
+                <h1 class="card-title pricing-card-title">5000<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Awesome Community</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Personal Fitness Program</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>
+                            Nutrition Check-in</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>
+                            Great Coaching</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>
+                            Swimming Pool</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>
+                            Car Parking</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>
+                            Sauna</li>
+                    </div>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">VIP</h4>
+              </div>
+              <div class="card-body">
+                <small class="text-body-secondary">Rs</small>
+                <h1 class="card-title pricing-card-title">8000<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Awesome Community</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Personal Fitness Program</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Nutrition Check-in</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Great Coaching</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Swimming Pool & Jacuzzi</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Sauna</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Mini Bar</li>
+                    </div>
+                    <div class="list-group-item list-group-item-action d-flex" aria-current="true">
+                        <img src="/static/icon2.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+                        <li>Lockers</li>
+                    </div>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4">Compare plans</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Basic</th>
+                <th style="width: 22%;">Premium</th>
+                <th style="width: 22%;">VIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Awesome Community</th>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Personal Fitness Program</th>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Nutrition Check-in</th>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Great Coaching</th>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Free Trial Class</th>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Car Parking</th>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Swimming Pool</th>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Sauna</th>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Jacuzzi</th>
+                <td></td>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Mini Bar</th>
+                <td></td>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Lockers</th>
+                <td></td>
+                <td></td>
+                <td><img src="/static/check.png" alt="twbs" width="16" height="16" class="rounded-circle flex-shrink-0"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    
+</div>
+
+{% endblock body %}

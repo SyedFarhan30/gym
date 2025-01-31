@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+Registration
+{% endblock title %}
+
+{% block body %}
+
+<div class="container" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #f9f9f9; max-width: 600px; margin: 50px auto; ">
+    <form class="row g-3" method="post" action="/registration">
+        {% csrf_token %}
+        <div class="col-12">
+            <label for="inputname" class="form-label" style="font-weight: bold; color: #333;">Name</label>
+            <input type="text" class="form-control" id="inputname" name="name" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        <div class="col-12">
+            <label for="inputemail" class="form-label"  style="font-weight: bold; color: #333;">Email</label>
+            <input type="email" class="form-control" id="inputemail" name="email" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        
+        <div class="col-12">
+            <label for="inputoccupation" class="form-label" style="font-weight: bold; color: #333;">Occupation</label>
+            <input type="text" class="form-control" id="inputoccupation" name = "occupation" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        <div class="col-12">
+            <label for="inputphone" class="form-label" style="font-weight: bold; color: #333;">Phone</label>
+            <input type="tel" class="form-control" id="inputphone" name="phone" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+
+        <!-- BMI Calculation Fields -->
+        <div class="col-12">
+            <label for="weight" class="form-label" style="font-weight: bold; color: #333;">Weight (kg)</label>
+            <input type="number" class="form-control" id="weight" name="weight" style="border-radius: 5px; border: 1px solid #ccc;" required>
+        </div>
+        <div class="col-12">
+            <label for="height" class="form-label" style="font-weight: bold; color: #333;">Height (cm)</label>
+            <input type="number" class="form-control" id="height" name="height" style="border-radius: 5px; border: 1px solid #ccc;" required>
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; border-radius: 5px;" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <div class="col-12">
+            <div id="bmiResult" style="font-weight: bold; color: #333;"></div>
+        </div>
+        <!-- <div class="col-md-6">
+            <label for="inputCity" class="form-label" style="font-weight: bold; color: #333;">City</label>
+            <input type="text" class="form-control" id="inputCity" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label" style="font-weight: bold; color: #333;">State</label>
+            <select id="inputState" class="form-select" style="border-radius: 5px; border: 1px solid #ccc;">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label" style="font-weight: bold; color: #333;">Zip</label>
+            <input type="text" class="form-control" id="inputZip" style="border-radius: 5px; border: 1px solid #ccc;">
+        </div> -->
+        <div class="col-12">
+            <div style="font-weight: bold; color: #333;">Fitness Goal</div>
+            <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fitnessGoal" id="weightLoss" value="weightLoss" style="border-radius: 5px; border: 1px solid #ccc;">
+                    <label class="form-check-label" for="weightLoss" style="font-size: 0.9rem; color: #555;">
+                        Weight loss
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fitnessGoal" id="muscleGain" value="muscleGain" style="border-radius: 5px; border: 1px solid #ccc;">
+                    <label class="form-check-label" for="muscleGain" style="font-size: 0.9rem; color: #555;">
+                        Muscle gain
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="fitnessGoal" id="overallHealth" value="overallHealth" style="border-radius: 5px; border: 1px solid #ccc;">
+                    <label class="form-check-label" for="overallHealth" style="font-size: 0.9rem; color: #555;">
+                        Overall health
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <a href="/registration" >
+                <button type="submit" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; border-radius: 5px;">Submit</button>
+               </a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function calculateBMI() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+        const bmi = weight / (height * height);
+        const resultElement = document.getElementById('bmiResult');
+
+        if (!weight || !height) {
+            resultElement.textContent = 'Please enter both weight and height.';
+            return;
+        }
+
+        let category = '';
+        if (bmi < 18.5) {
+            category = 'Underweight';
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            category = 'Normal weight';
+        } else if (bmi >= 25 && bmi < 29.9) {
+            category = 'Overweight';
+        } else {
+            category = 'Obese';
+        }
+
+        resultElement.textContent = `Your BMI is ${bmi.toFixed(2)}. Category: ${category}`;
+    }
+</script>
+
+{% endblock body %}
